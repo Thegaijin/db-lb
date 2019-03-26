@@ -18,7 +18,6 @@ addPostgresUser () {
 editPostgresConf () {
   printf '===========================Edit Postgres Conf file============================== \n'
   sudo rm -rf /etc/postgresql/9.4/main/postgresql.conf
-  sudo cp /Users/svictor/DevOps/GCP/LMS/db-lb/packer/master/postgresql.conf /etc/postgresql/9.5/main/postgresql.conf
 }
 
 run () {

@@ -22,11 +22,16 @@
   "provisioners": [
     {
       "type": "shell",
-      "script": "./master.sh"
+      "script": "./install_psql.sh"
+    },
+    {
+      "type": "file",
+      "source": "postgresql.conf",
+      "destination": "/home/ubuntu/postgresql.conf"
     },
     {
       "type": "shell",
-      "inline": ["sudo cp ./postgresql.conf /etc/postgresql/9.5/main/"]
+      "script": "./conf.sh"
     }
   ]
 }
