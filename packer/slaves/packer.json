@@ -14,7 +14,7 @@
       "ssh_username": "ubuntu",
       "image_description": "db image load balancer slave",
       "image_family": "ubuntu-1604-lts",
-      "image_name": "db-lb-test-{{timestamp}}",
+      "image_name": "db-lb-slaves",
       "disk_size": 10,
       "account_file": "{{ user `service_account_json`}}"
     }
