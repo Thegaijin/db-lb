@@ -8,25 +8,23 @@ In this repository, I setup a high availability database infrastructure with 2 s
 
 Deployment Tools
 
-    [Packer](https://www.packer.io/))
-    [Terraform](terraform.io)
-    Bash Scripts
+[Packer](https://www.packer.io/)
 
-Project directory structure
+[Terraform](terraform.io)
 
-The project is divided into two directories each holding separate components needed to setup the project.
+Bash Scripts
 
 #### How to deploy to GCP
 
-Once you have cloned the repository, set the necessary environment variables, changge directory to the root of the project, then run;
+Once you have cloned the repository, set the necessary environment variables, change directory to the root of the project, then run;
 
-        ```bash deploy.sh```
+        bash deploy.sh
 
 #### Acces to the HAproxy statistics page
 
 In order to access the statistics page, depending on what variables you opted to use, pick the external IP address of your HAproxy instance and use that in the browser along with the port number, `1936`. the URL should look something like
 
-    ```http://<HAproxy-external-ip>:1936
+        http://<HAproxy-external-ip>:1936
 
 #### Image of working infrastructure
 
