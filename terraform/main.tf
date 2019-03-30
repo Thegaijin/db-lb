@@ -8,7 +8,7 @@ provider "google" {
 # Create the master db instance
 resource "google_compute_instance" "db-lb-master" {
   name         = "thegaijin-test-master"
-  machine_type = "n1-standard-1"
+  machine_type = "g1-small"
   zone         = "${var.zone}"
 
   boot_disk {
@@ -28,7 +28,7 @@ resource "google_compute_instance" "db-lb-master" {
 
 resource "google_compute_instance" "db-lb-slave1" {
   name         = "thegaijin-test-slave1"
-  machine_type = "n1-standard-1"
+  machine_type = "g1-small"
   zone         = "${var.zone}"
 
   boot_disk {
@@ -48,7 +48,7 @@ resource "google_compute_instance" "db-lb-slave1" {
 
 resource "google_compute_instance" "db-lb-slave2" {
   name         = "thegaijin-test-slave2"
-  machine_type = "n1-standard-1"
+  machine_type = "g1-small"
   zone         = "${var.zone}"
 
   boot_disk {
@@ -68,7 +68,7 @@ resource "google_compute_instance" "db-lb-slave2" {
 
 resource "google_compute_instance" "haproxy-db-lb" {
   name         = "thegaijin-test-haproxy"
-  machine_type = "n1-standard-1"
+  machine_type = "g1-small"
   zone         = "${var.zone}"
 
   boot_disk {

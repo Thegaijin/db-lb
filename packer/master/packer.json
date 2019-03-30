@@ -1,6 +1,6 @@
 {
   "variables": {
-    "service_account_json": "../../shared/account-terraform.json",
+    "service_account_json": "./shared/account-terraform.json",
     "project_id": "{{env `PROJECT_ID`}}"
   },
   "builders": [
@@ -22,12 +22,12 @@
   "provisioners": [
     {
       "type": "file",
-      "source": "./configs",
+      "source": "./packer/master/configs",
       "destination": "/tmp/configs"
     },
     {
       "type": "shell",
-      "script": "./setup.sh"
+      "script": "./packer/master/setup.sh"
     }
   ]
 }
